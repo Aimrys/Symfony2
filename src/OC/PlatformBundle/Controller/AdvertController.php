@@ -16,13 +16,15 @@ class AdvertController extends Controller {
     }
 
     public function testAction() {
-        $content = $this->get('templating')->render('bhjbhjbkbnjkPlatformBundle:Advert:test.html.twig', array('nom' => 'Aimrys'));
+        $content = $this->get('templating')->render('PlatformBundle:Advert:test.html.twig', array('nom' => 'Aimrys'));
         return new Response($content);
     }
 
     public function viewAction($id)
     {
-        return $this->redirectToRoute('oc_platform_home');
+        $url = $this->get('router')->generate('oc_platform_home');
+
+        return new RedirectResponse($url);
     }
 
     public function viewSlugAction($slug, $year, $format) {
