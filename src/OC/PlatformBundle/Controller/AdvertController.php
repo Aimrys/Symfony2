@@ -16,7 +16,7 @@ class AdvertController extends Controller {
     }
 
     public function testAction() {
-        $content = $this->get('templating')->render('PlatformBundle:Advert:test.html.twig', array('nom' => 'Aimrys'));
+        $content = $this->get('templating')->render('bhjbhjbkbnjkPlatformBundle:Advert:test.html.twig', array('nom' => 'Aimrys'));
         return new Response($content);
     }
 
